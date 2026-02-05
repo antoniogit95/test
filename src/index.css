@@ -1,68 +1,248 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background: #D5DEEF;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(180deg, #395886, #628ECB);
+    color: white;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.hero-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.socials a {
+    margin: 0 8px;
+}
+
+.toggle {
+    margin: 15px 0;
+}
+
+.toggle-title {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.toggle-content {
+     padding-left: 20px;
+}
+
+.btn-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.hero-h1 {
+    font-size: 1.7rem;
+    margin: 8px 0 4px;
+}
+
+.hero h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.85;
+    margin-bottom: 12px;
+}
+
+.hero-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 480px;
+}
+
+
+
+/* Desktop */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text {
+        font-size: 1.3rem;
+    }
+
+    .hero{
+        min-height: 100vh;
+        min-height: 100svh;
+        justify-content: center;
+    }
+    .hero-img {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 16px;
+    }
+
+    .socials {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 24px;
+    }
+
+    .socials a {
+        width: 48px;
+        height: 48px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #fff;
+        font-size: 1.4rem;
+
+        transition: all 0.3s ease;
+        backdrop-filter: blur(6px);
+    }
+
+    .socials a:hover {
+        transform: translateY(-4px) scale(1.05);
+        background: #fff;
+    }
+
+    /* Colores oficiales al hacer hover */
+    .socials a:hover svg {
+        color: #000;
+    }
+
+    .socials a[aria-label="Facebook"]:hover svg {
+        color: #1877f2;
+    }
+
+    .socials a[aria-label="WhatsApp"]:hover svg {
+        color: #25d366;
+    }
+
+    .socials a[aria-label="Instagram"]:hover svg {
+        color: #e4405f;
+    }
+
+    .socials a[aria-label="YouTube"]:hover svg {
+        color: #ff0000;
+    }
+
+    .socials a[aria-label="TikTok"]:hover svg {
+        color: #000;
+    }
+    .services {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        color: #000;
+    }
+
+    .services h2 {
+        text-align: center;
+        font-size: clamp(1.3rem, 4vw, 2rem);
+        margin-bottom: 32px;
+        letter-spacing: 1px;
+    }
+
+    .derechos {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        color: #000;
+    }
+
+    .derechos h2 {
+        text-align: center;
+        font-size: clamp(1.3rem, 4vw, 2rem);
+        margin-bottom: 32px;
+        letter-spacing: 1px;
+    }
+    .find-us {
+        text-align: center;
+        padding: 48px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .find-us h2 {
+        margin-bottom: 24px;
+        font-size: clamp(1.4rem, 4vw, 2rem);
+    }
+
+    .map-wrapper {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        max-width: 100%;
+    }
+
+    .map-wrapper a {
+        display: block;
+        position: relative;
+    }
+
+    /* Mini mapa */
+    .map-wrapper iframe {
+        width: 100%;
+        height: 280px;
+        border: none;
+        pointer-events: none; /* 🔥 evita que el mapa capture el scroll */
+        filter: grayscale(20%) contrast(1.05);
+    }
+
+    /* Overlay clickeable */
+    .map-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+        color: #fff;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-size: 1.1rem;
+    }
+
+    .map-wrapper:hover .map-overlay {
+        opacity: 1;
+    }
 }
